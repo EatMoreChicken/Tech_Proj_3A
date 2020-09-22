@@ -2,7 +2,7 @@
 Author: Varghese Charly
 Date: 09/22/2020
 Purpose: The purpose of this project is to practice using method.
-The code will ask the user to enter thier name and then say hello to the name that they entered.
+The code will ask the user to enter their name and then say hello to the name that they entered.
 */
 
 using System;
@@ -33,10 +33,10 @@ namespace Tech_Proj_3A
             }
         }
 
-        // Method used to prompt the user to enter thier name and return the input.
+        // Method used to prompt the user to enter their name and return the input.
         private static string GetUserName()
         {
-            // Prompting the user to input thier name
+            // Prompting the user to input their name
             Console.WriteLine("What is your name?");
             // Grabbing the user's input and writing it to the string variable "userName"
             string userName = Console.ReadLine();
@@ -54,9 +54,9 @@ namespace Tech_Proj_3A
         // Method used to display the exit prompt to the user. The method takes a boolean input called which it remains "error". This is discussed in the method.
         private static void ExitPrompt(bool error)
         {
-            /* An If Then statemenet is used to determine the cause of the exit. If the boolean "error" has the value of "true",
+            /* An If Then statement is used to determine the cause of the exit. If the boolean "error" has the value of "true",
              it means that the exit prompt was caused by an error (in the case of the "Catch" section initiating this method).
-            If the boolean is false, it means that the exit was normal, such as then the program is successfuly finished doing
+            If the boolean is false, it means that the exit was normal, such as then the program is successfully finished doing
             what it needs to do.
             */
             if (error == true)
@@ -69,11 +69,11 @@ namespace Tech_Proj_3A
             }
             else
             {
-                // If the "error" boolean is false, it means that the code is exiting normally. The code with print out intructions for a normal exit.
+                // If the "error" boolean is false, it means that the code is exiting normally. The code with print out instructions for a normal exit.
                 Console.WriteLine("The program will now close. Please reopen the program to try again.");
                 Console.WriteLine("Press any key to continue...");
             }
-            // Waiting for the user to ackknowledge before exiting the code.
+            // Waiting for the user to acknowledge before exiting the code.
             Console.ReadKey(true);
         }
     }
