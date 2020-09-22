@@ -16,7 +16,7 @@ namespace Tech_Proj_3A
         {
             try
             {
-                UserPrompt();
+                UserOutput(GetUserName());
                 Console.ReadKey(true);
             }
             catch
@@ -25,9 +25,16 @@ namespace Tech_Proj_3A
             }
         }
 
-        private static void UserPrompt()
+        private static string GetUserName()
         {
             Console.WriteLine("What is your name?");
+            string userName = Console.ReadLine();
+            return userName;
+        }
+
+        private static void UserOutput(string userName)
+        {
+            Console.WriteLine("Hello " + userName.ToString() + "!");
         }
     }
 }
