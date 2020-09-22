@@ -14,14 +14,19 @@ namespace Tech_Proj_3A
         
         static void Main(string[] args)
         {
+            /* Using try catch to ensure that if an error occurs during the execution of the code, mainly if the user enters an unexpected input, the catch will display an error
+             instead of the code crashing with no error. */
             try
             {
                 UserOutput(GetUserName());
-                Console.ReadKey(true);
+                // Waiting for user input before exiting the program
+                ExitPrompt(false);
             }
+            
+            // Will display an error code if an error occurs during the execution of the code.
             catch
             {
-                Console.ReadKey(true);
+                ExitPrompt(true);
             }
         }
 
@@ -35,6 +40,23 @@ namespace Tech_Proj_3A
         private static void UserOutput(string userName)
         {
             Console.WriteLine("Hello " + userName.ToString() + "!");
+        }
+
+        private static void ExitPrompt(bool error)
+        {
+            if (error == true)
+            {
+                Console.WriteLine("Uh oh! Looks like the program encountered an error.");
+                Console.WriteLine("Please ensure that only inputting your name when prompted.");
+                Console.WriteLine("The program will now close. Please reopen the program to try again.");
+                Console.WriteLine("Press any key to continue...");
+            }
+            else
+            {
+                Console.WriteLine("The program will now close. Please reopen the program to try again.");
+                Console.WriteLine("Press any key to continue...");
+            }
+            Console.ReadKey(true);
         }
     }
 }
